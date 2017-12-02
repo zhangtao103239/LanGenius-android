@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.xchat.stevenzack.langenius.FileChooserMultiFiles">
+
+
+    <ListView
+        android:id="@+id/filechooser_listview"
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_height="match_parent" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/filechooser_button_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="bottom"
+            android:background="#ddd"
+            android:text="@string/up"
+            android:textColor="#333" />
+        <Button
+            android:id="@+id/filechooser_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="bottom"
+            android:background="@color/colorPrimary"
+            android:text="@string/str_ok"
+            android:textColor="#fff" />
+    </LinearLayout>
+</LinearLayout>

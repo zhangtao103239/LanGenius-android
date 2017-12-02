@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group>
+        <item
+            android:title="@string/internal_storage"
+            android:id="@+id/dc_internal"/>
+        <item
+            android:title="@string/external_storage"
+            android:id="@+id/dc_external"/>
+    </group>
+    <group>
+        <item
+            android:id="@+id/dc_byname"
+            android:title="@string/order_by_name"/>
+        <item
+            android:id="@+id/dc_bydate"
+            android:title="@string/order_by_data"/>
+        <item
+            android:id="@+id/dc_bylength"
+            android:title="@string/order_by_length"/>
+    </group>
+</menu>

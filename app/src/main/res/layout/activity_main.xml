@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/main_container"
+    tools:context="com.xchat.stevenzack.langenius.MainActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:background="@color/colorPrimary"
+        android:elevation="10dp"
+        android:id="@+id/main_headFrame"
+        android:layout_height="110dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:text="@string/app_name"
+            android:textColor="#fff"
+            android:textSize="28sp"
+            android:layout_marginLeft="12dp"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginLeft="12dp"
+            android:padding="5dp"
+            android:layout_marginTop="40dp"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/txt_hostname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#fff"
+                android:layout_gravity="center_vertical"
+                android:inputType="none"
+                android:text="http://192.168.1.109:4444"
+                android:textColor="#000"
+                android:textSize="12sp" />
+            <ImageView
+                android:layout_width="wrap_content"
+                app:srcCompat="@drawable/qr_code"
+                android:id="@+id/main_qr_code"
+                android:layout_marginLeft="10dp"
+                android:layout_height="wrap_content" />
+            <ImageView
+                android:layout_width="wrap_content"
+                app:srcCompat="@drawable/scan"
+                android:id="@+id/main_scan"
+                android:layout_marginLeft="10dp"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <Switch
+            android:id="@+id/main_switch1"
+            android:layout_width="wrap_content"
+            android:textColor="#fff"
+            android:padding="10dp"
+            android:layout_marginTop="76dp"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="@string/cbsharedisabled"
+            android:textColor="#ccc"
+            android:id="@+id/main_txt_clipshare"
+            android:layout_marginLeft="70dp"
+            android:textSize="13sp"
+            android:layout_marginTop="84dp"
+            android:layout_height="wrap_content" />
+
+        <ImageButton
+            android:id="@+id/bt_openbrowser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:padding="8dp"
+            android:layout_marginRight="4dp"
+            android:layout_marginTop="65dp"
+            android:background="#00000000"
+            app:srcCompat="@drawable/open" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:background="#00000000"
+            android:layout_marginRight="8dp"
+            android:layout_gravity="end"
+            android:padding="8dp"
+            android:id="@+id/main_optionMenu"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_menu_black_24dp" />
+    </FrameLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:text="@string/shareFiles"
+        android:textSize="15sp"
+        android:id="@+id/main_secondText"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_marginTop="126dp"
+        android:layout_marginLeft="12dp"
+        android:layout_height="wrap_content" />
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_marginTop="160dp"
+        android:divider="@null"
+        android:id="@+id/main_listview"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_height="match_parent">
+    </ListView>
+
+    <com.getbase.floatingactionbutton.FloatingActionsMenu
+        android:layout_width="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:id="@+id/main_fab"
+        android:layout_margin="10dp"
+        app:fab_labelsPosition="left"
+        app:fab_labelStyle="@style/menu_labels_style"
+        app:fab_addButtonColorNormal="@color/colorAccent"
+        android:layout_height="wrap_content">
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/main_fab_file"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_colorNormal="@color/lightgreen"
+            app:fab_title="@string/files"
+            app:fab_icon="@drawable/file_white" />
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/main_fab_apps"
+            android:layout_width="wrap_content"
+            app:fab_colorNormal="@color/pink"
+            app:fab_title="@string/apps"
+            android:layout_height="wrap_content"
+            app:fab_icon="@drawable/ic_apps_black_24dp" />
+    </com.getbase.floatingactionbutton.FloatingActionsMenu>
+    <FrameLayout
+        android:id="@+id/main_introFrame"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="match_parent"
+        android:elevation="20dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:text="@string/newbee_guide"
+            android:textColor="#555"
+            android:textStyle="bold"
+            android:layout_marginLeft="15dp"
+            android:textSize="15sp" />
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="40dp"
+            android:layout_marginRight="15dp"
+            android:layout_height="70dp">
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:text="@string/never_show_up_again"
+                android:layout_gravity="end"
+                android:checked="true"
+                android:textColor="#555"
+                android:id="@+id/main_neverShowUpAgain"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="@string/quit_guide"
+                android:layout_gravity="end|bottom"
+                android:id="@+id/main_quitGuide"
+                android:textSize="15sp"
+                android:padding="5dp"
+                android:textColor="#555"
+                android:layout_height="wrap_content" />
+        </FrameLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="@string/click_to_add"
+            android:textStyle="bold"
+            android:textColor="#000"
+            android:id="@+id/main_introInfo"
+            android:textSize="30sp"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:layout_height="wrap_content" />
+    </FrameLayout>
+</android.support.design.widget.CoordinatorLayout>

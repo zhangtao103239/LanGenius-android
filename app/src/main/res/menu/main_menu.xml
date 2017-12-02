@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:title="@string/keyboardController"
+        android:id="@+id/main_menu_kc"
+        />
+    <item
+        android:title="@string/settings"
+        android:id="@+id/main_menu_settings"/>
+</menu>
